@@ -149,16 +149,16 @@ class __config_flags:
 
 
 class __compat__(__config_flags):
-    """
-    A cross-version compatibility configuration for pyparsing features that will be
-    released in a future version. By setting values in this configuration to True,
-    those features can be enabled in prior versions for compatibility development
-    and testing.
+    """A cross-version compatibility configuration for pyparsing features that will
+    be released in a future version. By setting values in this configuration to
+    True, those features can be enabled in prior versions for compatibility
+    development and testing.
 
-     - collect_all_And_tokens - flag to enable fix for Issue #63 that fixes erroneous grouping
-       of results names when an And expression is nested within an Or or MatchFirst;
-       maintained for compatibility, but setting to False no longer restores pre-2.3.1
-       behavior
+     - collect_all_And_tokens - flag to enable fix for Issue #63 that fixes
+       erroneous grouping of results names when an And expression is nested
+       within an Or or MatchFirst; maintained for compatibility, but setting to
+       False no longer restores pre-2.3.1 behavior
+
     """
 
     _type_desc = "compatibility"
@@ -172,19 +172,25 @@ class __compat__(__config_flags):
 
 
 class __diag__(__config_flags):
-    """
-    Diagnostic configuration (all default to False)
-     - warn_multiple_tokens_in_named_alternation - flag to enable warnings when a results
-       name is defined on a MatchFirst or Or expression with one or more And subexpressions
-     - warn_ungrouped_named_tokens_in_collection - flag to enable warnings when a results
-       name is defined on a containing expression with ungrouped subexpressions that also
-       have results names
-     - warn_name_set_on_empty_Forward - flag to enable warnings whan a Forward is defined
-       with a results name, but has no contents defined
-     - warn_on_multiple_string_args_to_oneof - flag to enable warnings whan oneOf is
-       incorrectly called with multiple str arguments
-     - enable_debug_on_named_expressions - flag to auto-enable debug on all subsequent
-       calls to ParserElement.setName()
+    """Diagnostic configuration (all default to False)
+
+     - warn_multiple_tokens_in_named_alternation - flag to enable warnings when
+       a results name is defined on a MatchFirst or Or expression with one or
+       more And subexpressions
+
+     - warn_ungrouped_named_tokens_in_collection - flag to enable warnings when
+       a results name is defined on a containing expression with ungrouped
+       subexpressions that also have results names
+
+     - warn_name_set_on_empty_Forward - flag to enable warnings whan a Forward
+       is defined with a results name, but has no contents defined
+
+     - warn_on_multiple_string_args_to_oneof - flag to enable warnings whan
+       oneOf is incorrectly called with multiple str arguments
+
+     - enable_debug_on_named_expressions - flag to auto-enable debug on all
+       subsequent calls to ParserElement.setName()
+
     """
 
     _type_desc = "diagnostic"
